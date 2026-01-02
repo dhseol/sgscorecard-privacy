@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>개인정보처리방침 - Serious Golfer’s Scorecard</title> 
+    <title>개인정보처리방침 - Serious Golfer's Scorecard</title> 
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
@@ -41,6 +41,13 @@
         li {
             margin-bottom: 8px;
         }
+        .highlight {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #006747;
+            margin: 20px 0;
+            font-weight: 500;
+        }
         .contact {
             background: #f8f9fa;
             padding: 15px;
@@ -54,107 +61,79 @@
         <h1>개인정보처리방침</h1>
         <p class="update-date"><strong>최종 수정일:</strong> 2026년 1월 2일</p>
         
-        <p>진심골퍼 스코어카드(이하 "본 앱")는 사용자의 개인정보를 중요하게 생각하며, 개인정보 보호법 및 관련 법령을 준수합니다.</p>
+        <div class="highlight">
+            <strong>중요:</strong> 본 앱은 사용자의 개인정보를 수집하거나 외부로 전송하지 않습니다. 
+            모든 데이터는 사용자의 기기에만 저장되며, 외부 서버로 전송되지 않습니다.
+        </div>
         
-        <h2>1. 수집하는 개인정보</h2>
-        <p>본 앱은 다음과 같은 개인정보를 수집합니다:</p>
+        <h2>1. 개인정보의 수집 및 이용</h2>
+        <p>진심골퍼 스코어카드(이하 "본 앱")는 다음과 같이 개인정보를 처리합니다:</p>
         <ul>
-            <li><strong>소셜 로그인 정보</strong>
-                <ul>
-                    <li>Google 로그인: 이메일 주소, 이름, 프로필 사진</li>
-                    <li>Kakao 로그인: 이메일 주소, 이름, 프로필 사진</li>
-                </ul>
-            </li>
-            <li><strong>골프 스코어 데이터</strong>
-                <ul>
-                    <li>라운드 기록 (날짜, 골프장, 스코어)</li>
-                    <li>홀별 상세 기록</li>
-                </ul>
-            </li>
-            <li><strong>기기 정보</strong>
-                <ul>
-                    <li>앱 사용 통계 및 오류 로그 (Firebase Analytics)</li>
-                </ul>
-            </li>
+            <li><strong>수집하는 정보:</strong> 없음</li>
+            <li><strong>외부 전송:</strong> 없음</li>
+            <li><strong>저장 위치:</strong> 사용자 기기 내부 저장소에만 저장</li>
         </ul>
         
-        <h2>2. 개인정보의 수집 및 이용 목적</h2>
+        <h2>2. 앱에서 생성되는 데이터</h2>
+        <p>본 앱은 사용자가 입력한 다음 정보를 <strong>사용자 기기에만</strong> 저장합니다:</p>
         <ul>
-            <li>사용자 인증 및 계정 관리</li>
-            <li>골프 스코어 기록의 저장, 관리 및 통계 제공</li>
-            <li>데이터 백업 및 복구 서비스 제공</li>
-            <li>앱 성능 개선 및 버그 수정</li>
-            <li>사용자 문의 대응</li>
+            <li>골프 라운드 기록 (날짜, 골프장명, 스코어)</li>
+            <li>홀별 상세 기록 (Par, Score, Putt, Fairway, GIR, Hazard, Bunker, Penalty, 메모)</li>
+            <li>앱 설정 정보 (언어 설정 등)</li>
         </ul>
+        <p><strong>위 데이터는 절대 외부로 전송되지 않으며</strong>, 오직 사용자의 기기 내부에만 저장됩니다.</p>
         
-        <h2>3. 개인정보의 제3자 제공</h2>
-        <p>본 앱은 수집된 개인정보를 다음 서비스 제공자와 공유합니다:</p>
-        <ul>
-            <li><strong>Google (Firebase)</strong>
-                <ul>
-                    <li>제공 목적: 사용자 인증, 데이터 저장, 앱 분석</li>
-                    <li>제공 항목: 이메일, 이름, 프로필 사진, 사용자 UID</li>
-                    <li>보유 기간: 계정 삭제 시까지</li>
-                </ul>
-            </li>
-            <li><strong>Kakao</strong>
-                <ul>
-                    <li>제공 목적: 소셜 로그인</li>
-                    <li>제공 항목: 이메일, 이름, 프로필 사진</li>
-                    <li>보유 기간: 계정 삭제 시까지</li>
-                </ul>
-            </li>
-        </ul>
-        <p><strong>본 앱은 사용자의 개인정보를 제3자에게 판매하거나 마케팅 목적으로 공유하지 않습니다.</strong></p>
+        <h2>3. 제3자 제공</h2>
+        <p>본 앱은 사용자의 정보를 제3자에게 제공하지 않습니다.</p>
         
         <h2>4. 개인정보의 보유 및 이용 기간</h2>
         <ul>
-            <li>사용자가 계정을 삭제하거나 서비스 탈퇴를 요청할 때까지 보관합니다.</li>
-            <li>계정 삭제 요청 시 모든 개인정보를 즉시 파기합니다.</li>
-            <li>법령에 따라 보존이 필요한 경우 해당 기간 동안 보관합니다.</li>
+            <li>모든 데이터는 사용자가 앱을 삭제할 때까지 기기에 보관됩니다.</li>
+            <li>앱을 삭제하면 모든 데이터가 함께 삭제됩니다.</li>
+            <li>사용자는 앱 내에서 언제든지 개별 기록을 삭제할 수 있습니다.</li>
         </ul>
         
-        <h2>5. 개인정보의 파기 절차 및 방법</h2>
+        <h2>5. 개인정보의 파기</h2>
         <ul>
-            <li>사용자가 계정 삭제를 요청하면 모든 개인정보를 즉시 파기합니다.</li>
-            <li>전자적 파일 형태: 복구 불가능한 방법으로 영구 삭제</li>
-            <li>종이 문서: 분쇄 또는 소각</li>
+            <li>앱 삭제 시 모든 데이터가 자동으로 삭제됩니다.</li>
+            <li>개별 기록은 앱 내에서 직접 삭제할 수 있습니다.</li>
         </ul>
         
         <h2>6. 사용자의 권리</h2>
         <p>사용자는 다음과 같은 권리를 가집니다:</p>
         <ul>
-            <li>개인정보 열람 요구</li>
-            <li>개인정보 정정 요구</li>
-            <li>개인정보 삭제 요구</li>
-            <li>개인정보 처리 정지 요구</li>
+            <li>앱 내에서 언제든지 자신의 데이터를 조회할 수 있습니다.</li>
+            <li>앱 내에서 언제든지 데이터를 수정하거나 삭제할 수 있습니다.</li>
+            <li>앱을 삭제하여 모든 데이터를 완전히 제거할 수 있습니다.</li>
         </ul>
-        <p>위 권리 행사를 원하시면 아래 연락처로 문의해 주시기 바랍니다.</p>
         
         <h2>7. 개인정보의 안전성 확보 조치</h2>
         <ul>
-            <li>개인정보의 암호화된 전송 (HTTPS)</li>
-            <li>안전한 클라우드 서버에 데이터 저장 (Firebase)</li>
-            <li>사용자만 자신의 데이터에 접근 가능</li>
-            <li>정기적인 보안 업데이트</li>
+            <li>모든 데이터는 사용자 기기의 내부 저장소에만 저장됩니다.</li>
+            <li>외부 네트워크를 통한 데이터 전송이 없습니다.</li>
+            <li>기기의 보안 설정(잠금 화면 등)에 따라 보호됩니다.</li>
         </ul>
         
-        <h2>8. 개인정보 자동 수집 장치의 설치·운영 및 거부</h2>
-        <p>본 앱은 Firebase Analytics를 통해 앱 사용 통계를 수집합니다. 사용자는 기기 설정에서 이를 거부할 수 있습니다.</p>
+        <h2>8. 인터넷 권한</h2>
+        <p>본 앱은 다음 목적으로만 인터넷 권한을 요청합니다:</p>
+        <ul>
+            <li>향후 업데이트를 위한 준비 (현재는 사용하지 않음)</li>
+        </ul>
+        <p><strong>현재 버전에서는 인터넷을 통한 데이터 전송이 전혀 발생하지 않습니다.</strong></p>
         
         <h2>9. 개인정보처리방침의 변경</h2>
         <ul>
             <li>본 개인정보처리방침은 법령 및 서비스 변경에 따라 수정될 수 있습니다.</li>
-            <li>변경 시 앱 내 공지사항을 통해 알려드립니다.</li>
+            <li>변경 시 앱 업데이트 공지를 통해 알려드립니다.</li>
             <li>중요한 변경사항은 최소 7일 전에 사전 공지합니다.</li>
         </ul>
         
         <div class="contact">
-            <h2>10. 개인정보 보호책임자 및 문의</h2>
+            <h2>10. 문의</h2>
             <p>개인정보 처리에 관한 문의사항이 있으시면 아래로 연락 주시기 바랍니다:</p>
             <ul>
                 <li><strong>이메일:</strong> sorynury@gmail.com</li>
-                <li><strong>앱 이름:</strong> 진심골퍼 스코어카드</li>
+                <li><strong>앱 이름:</strong> 진심골퍼 스코어카드 (SGScorecard)</li>
             </ul>
         </div>
         
@@ -163,70 +142,79 @@
         <h1 style="margin-top: 40px;">Privacy Policy</h1>
         <p class="update-date"><strong>Last Updated:</strong> January 2, 2026</p>
         
-        <p>Serious Golfer’s Scorecard ("the App") values your privacy and complies with applicable data protection laws.</p>
+        <div class="highlight">
+            <strong>Important:</strong> This app does not collect or transmit any personal information. 
+            All data is stored only on your device and is never sent to external servers.
+        </div>
         
-        <h2>1. Information We Collect</h2>
+        <h2>1. Information Collection and Use</h2>
+        <p>Serious Golfer's Scorecard ("the App") handles information as follows:</p>
         <ul>
-            <li><strong>Social Login Information</strong>
-                <ul>
-                    <li>Google Login: Email address, name, profile picture</li>
-                    <li>Kakao Login: Email address, name, profile picture</li>
-                </ul>
-            </li>
-            <li><strong>Golf Score Data</strong>
-                <ul>
-                    <li>Round records (date, golf course, scores)</li>
-                    <li>Hole-by-hole details</li>
-                </ul>
-            </li>
-            <li><strong>Device Information</strong>
-                <ul>
-                    <li>App usage statistics and error logs (Firebase Analytics)</li>
-                </ul>
-            </li>
+            <li><strong>Information Collected:</strong> None</li>
+            <li><strong>External Transmission:</strong> None</li>
+            <li><strong>Storage Location:</strong> Only on user's device internal storage</li>
         </ul>
         
-        <h2>2. How We Use Your Information</h2>
+        <h2>2. Data Generated by the App</h2>
+        <p>The app stores the following user-entered information <strong>only on the user's device</strong>:</p>
         <ul>
-            <li>User authentication and account management</li>
-            <li>Storing, managing, and providing statistics for golf scores</li>
-            <li>Providing data backup and restore services</li>
-            <li>Improving app performance and fixing bugs</li>
-            <li>Responding to user inquiries</li>
+            <li>Golf round records (date, golf course name, scores)</li>
+            <li>Hole-by-hole details (Par, Score, Putt, Fairway, GIR, Hazard, Bunker, Penalty, Notes)</li>
+            <li>App settings (language preferences, etc.)</li>
         </ul>
+        <p><strong>This data is never transmitted externally</strong> and is stored only on the user's device.</p>
         
         <h2>3. Third-Party Sharing</h2>
-        <ul>
-            <li><strong>Google (Firebase):</strong> Authentication, data storage, analytics</li>
-            <li><strong>Kakao:</strong> Social login</li>
-        </ul>
-        <p><strong>We do not sell your personal information or share it for marketing purposes.</strong></p>
+        <p>The app does not share user information with any third parties.</p>
         
         <h2>4. Data Retention</h2>
-        <p>We retain your data until you delete your account or request service withdrawal. Upon deletion request, all personal information is immediately destroyed.</p>
-        
-        <h2>5. Your Rights</h2>
         <ul>
-            <li>Access your personal information</li>
-            <li>Correct your personal information</li>
-            <li>Delete your personal information</li>
-            <li>Request processing suspension</li>
+            <li>All data is retained on the device until the app is uninstalled.</li>
+            <li>Uninstalling the app will delete all data.</li>
+            <li>Users can delete individual records at any time within the app.</li>
         </ul>
         
-        <h2>6. Security Measures</h2>
+        <h2>5. Data Deletion</h2>
         <ul>
-            <li>Encrypted data transmission (HTTPS)</li>
-            <li>Secure cloud storage (Firebase)</li>
-            <li>User-only data access</li>
-            <li>Regular security updates</li>
+            <li>All data is automatically deleted when the app is uninstalled.</li>
+            <li>Individual records can be deleted directly within the app.</li>
+        </ul>
+        
+        <h2>6. User Rights</h2>
+        <p>Users have the following rights:</p>
+        <ul>
+            <li>View your data at any time within the app</li>
+            <li>Modify or delete your data at any time within the app</li>
+            <li>Completely remove all data by uninstalling the app</li>
+        </ul>
+        
+        <h2>7. Security Measures</h2>
+        <ul>
+            <li>All data is stored only in the device's internal storage</li>
+            <li>No data transmission over external networks</li>
+            <li>Protected by device security settings (lock screen, etc.)</li>
+        </ul>
+        
+        <h2>8. Internet Permission</h2>
+        <p>The app requests internet permission only for:</p>
+        <ul>
+            <li>Preparation for future updates (not currently used)</li>
+        </ul>
+        <p><strong>The current version does not transmit any data over the internet.</strong></p>
+        
+        <h2>9. Changes to Privacy Policy</h2>
+        <ul>
+            <li>This privacy policy may be updated to reflect changes in laws or services.</li>
+            <li>Changes will be announced through app update notifications.</li>
+            <li>Significant changes will be announced at least 7 days in advance.</li>
         </ul>
         
         <div class="contact">
-            <h2>7. Contact Us</h2>
+            <h2>10. Contact Us</h2>
             <p>For privacy-related inquiries, please contact:</p>
             <ul>
                 <li><strong>Email:</strong> sorynury@gmail.com</li>
-                <li><strong>App Name:</strong> Serious Golfer’s Scorecard (SGScorecard)</li>
+                <li><strong>App Name:</strong> Serious Golfer's Scorecard (SGScorecard)</li>
             </ul>
         </div>
     </div>
