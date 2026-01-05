@@ -48,6 +48,12 @@
             margin: 20px 0;
             font-weight: 500;
         }
+        .analytics-info {
+            background: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            margin: 20px 0;
+        }
         .contact {
             background: #f8f9fa;
             padding: 15px;
@@ -59,20 +65,41 @@
 <body>
     <div class="container">
         <h1>개인정보처리방침</h1>
-        <p class="update-date"><strong>최종 수정일:</strong> 2026년 1월 2일</p>
+        <p class="update-date"><strong>최종 수정일:</strong> 2026년 1월 5일</p>
         
         <div class="highlight">
-            <strong>중요:</strong> 본 앱은 사용자의 개인정보를 수집하거나 외부로 전송하지 않습니다. 
-            모든 데이터는 사용자의 기기에만 저장되며, 외부 서버로 전송되지 않습니다.
+            <strong>중요:</strong> 본 앱은 골프 기록 데이터를 사용자의 기기에만 저장합니다. 
+            다만, 앱 사용 패턴 분석을 위해 Firebase Analytics를 사용하여 익명화된 사용 통계를 수집합니다.
         </div>
         
         <h2>1. 개인정보의 수집 및 이용</h2>
         <p>진심골퍼 스코어카드(이하 "본 앱")는 다음과 같이 개인정보를 처리합니다:</p>
+        
+        <h3>1.1 로컬 저장 데이터 (기기 내부에만 저장)</h3>
         <ul>
-            <li><strong>수집하는 정보:</strong> 없음</li>
+            <li><strong>수집하는 정보:</strong> 골프 라운드 기록, 홀별 상세 기록, 앱 설정</li>
             <li><strong>외부 전송:</strong> 없음</li>
             <li><strong>저장 위치:</strong> 사용자 기기 내부 저장소에만 저장</li>
         </ul>
+        
+        <h3>1.2 Firebase Analytics를 통한 사용 통계 수집</h3>
+        <div class="analytics-info">
+            <p><strong>수집 목적:</strong> 앱 개선 및 사용자 경험 향상</p>
+            <p><strong>수집하는 정보:</strong></p>
+            <ul>
+                <li>앱 사용 패턴 (화면 조회, 기능 사용 빈도)</li>
+                <li>기기 정보 (OS 버전, 기기 모델, 언어 설정)</li>
+                <li>앱 성능 데이터 (오류 발생, 앱 실행 시간)</li>
+                <li>익명화된 사용자 ID (Firebase에서 자동 생성)</li>
+                <li>일반적인 골프 통계 (라운드 수, 평균 스코어 등 - 개인 식별 불가)</li>
+            </ul>
+            <p><strong>수집하지 않는 정보:</strong></p>
+            <ul>
+                <li>이름, 이메일, 전화번호 등 개인 식별 정보</li>
+                <li>정확한 위치 정보</li>
+                <li>구체적인 골프장 이름이나 개인 메모 내용</li>
+            </ul>
+        </div>
         
         <h2>2. 앱에서 생성되는 데이터</h2>
         <p>본 앱은 사용자가 입력한 다음 정보를 <strong>사용자 기기에만</strong> 저장합니다:</p>
@@ -81,47 +108,69 @@
             <li>홀별 상세 기록 (Par, Score, Putt, Fairway, GIR, Hazard, Bunker, Penalty, 메모)</li>
             <li>앱 설정 정보 (언어 설정 등)</li>
         </ul>
-        <p><strong>위 데이터는 절대 외부로 전송되지 않으며</strong>, 오직 사용자의 기기 내부에만 저장됩니다.</p>
+        <p><strong>위 골프 기록 데이터는 절대 외부로 전송되지 않으며</strong>, 오직 사용자의 기기 내부에만 저장됩니다.</p>
         
         <h2>3. 제3자 제공</h2>
-        <p>본 앱은 사용자의 정보를 제3자에게 제공하지 않습니다.</p>
+        <p>본 앱은 다음의 경우를 제외하고 사용자의 정보를 제3자에게 제공하지 않습니다:</p>
+        <ul>
+            <li><strong>Firebase Analytics (Google):</strong> 앱 사용 통계 분석 목적
+                <ul>
+                    <li>제공되는 정보: 익명화된 사용 패턴, 기기 정보, 일반적인 통계</li>
+                    <li>개인 식별 정보는 제공되지 않음</li>
+                    <li>Google의 개인정보처리방침 적용: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                </ul>
+            </li>
+        </ul>
         
         <h2>4. 개인정보의 보유 및 이용 기간</h2>
         <ul>
-            <li>모든 데이터는 사용자가 앱을 삭제할 때까지 기기에 보관됩니다.</li>
-            <li>앱을 삭제하면 모든 데이터가 함께 삭제됩니다.</li>
+            <li><strong>로컬 데이터:</strong> 사용자가 앱을 삭제할 때까지 기기에 보관됩니다.</li>
+            <li><strong>Analytics 데이터:</strong> Firebase에서 최대 14개월간 보관 후 자동 삭제됩니다.</li>
+            <li>앱을 삭제하면 기기의 모든 로컬 데이터가 함께 삭제됩니다.</li>
             <li>사용자는 앱 내에서 언제든지 개별 기록을 삭제할 수 있습니다.</li>
         </ul>
         
         <h2>5. 개인정보의 파기</h2>
         <ul>
-            <li>앱 삭제 시 모든 데이터가 자동으로 삭제됩니다.</li>
+            <li>앱 삭제 시 기기의 모든 로컬 데이터가 자동으로 삭제됩니다.</li>
             <li>개별 기록은 앱 내에서 직접 삭제할 수 있습니다.</li>
+            <li>Firebase Analytics 데이터는 14개월 후 자동 삭제됩니다.</li>
         </ul>
         
         <h2>6. 사용자의 권리</h2>
         <p>사용자는 다음과 같은 권리를 가집니다:</p>
         <ul>
-            <li>앱 내에서 언제든지 자신의 데이터를 조회할 수 있습니다.</li>
+            <li>앱 내에서 언제든지 자신의 골프 기록을 조회할 수 있습니다.</li>
             <li>앱 내에서 언제든지 데이터를 수정하거나 삭제할 수 있습니다.</li>
-            <li>앱을 삭제하여 모든 데이터를 완전히 제거할 수 있습니다.</li>
+            <li>앱을 삭제하여 모든 로컬 데이터를 완전히 제거할 수 있습니다.</li>
+            <li>기기 설정에서 Analytics 추적을 비활성화할 수 있습니다 (광고 ID 재설정).</li>
         </ul>
         
         <h2>7. 개인정보의 안전성 확보 조치</h2>
         <ul>
-            <li>모든 데이터는 사용자 기기의 내부 저장소에만 저장됩니다.</li>
-            <li>외부 네트워크를 통한 데이터 전송이 없습니다.</li>
+            <li>골프 기록 데이터는 사용자 기기의 내부 저장소에만 저장됩니다.</li>
+            <li>Firebase Analytics는 Google의 보안 프로토콜을 따릅니다.</li>
+            <li>전송되는 Analytics 데이터는 암호화됩니다.</li>
+            <li>개인 식별 정보는 수집하지 않습니다.</li>
             <li>기기의 보안 설정(잠금 화면 등)에 따라 보호됩니다.</li>
         </ul>
         
         <h2>8. 인터넷 권한</h2>
-        <p>본 앱은 다음 목적으로만 인터넷 권한을 요청합니다:</p>
+        <p>본 앱은 다음 목적으로 인터넷 권한을 사용합니다:</p>
         <ul>
-            <li>향후 업데이트를 위한 준비 (현재는 사용하지 않음)</li>
+            <li><strong>Firebase Analytics:</strong> 익명화된 사용 통계 전송</li>
+            <li><strong>향후 기능:</strong> 클라우드 백업 등 (선택적 기능으로 제공 예정)</li>
         </ul>
-        <p><strong>현재 버전에서는 인터넷을 통한 데이터 전송이 전혀 발생하지 않습니다.</strong></p>
+        <p><strong>골프 기록 데이터는 인터넷을 통해 전송되지 않습니다.</strong></p>
         
-        <h2>9. 개인정보처리방침의 변경</h2>
+        <h2>9. Analytics 추적 거부</h2>
+        <p>사용자는 다음 방법으로 Analytics 추적을 제한할 수 있습니다:</p>
+        <ul>
+            <li><strong>Android:</strong> 설정 > Google > 광고 > 광고 ID 재설정</li>
+            <li><strong>iOS:</strong> 설정 > 개인정보 보호 > 추적 > 앱이 추적을 요청하도록 허용 끄기</li>
+        </ul>
+        
+        <h2>10. 개인정보처리방침의 변경</h2>
         <ul>
             <li>본 개인정보처리방침은 법령 및 서비스 변경에 따라 수정될 수 있습니다.</li>
             <li>변경 시 앱 업데이트 공지를 통해 알려드립니다.</li>
@@ -129,7 +178,7 @@
         </ul>
         
         <div class="contact">
-            <h2>10. 문의</h2>
+            <h2>11. 문의</h2>
             <p>개인정보 처리에 관한 문의사항이 있으시면 아래로 연락 주시기 바랍니다:</p>
             <ul>
                 <li><strong>이메일:</strong> sorynury@gmail.com</li>
@@ -140,20 +189,41 @@
         <hr style="margin-top: 40px; border: none; border-top: 1px solid #ddd;">
         
         <h1 style="margin-top: 40px;">Privacy Policy</h1>
-        <p class="update-date"><strong>Last Updated:</strong> January 2, 2026</p>
+        <p class="update-date"><strong>Last Updated:</strong> January 5, 2026</p>
         
         <div class="highlight">
-            <strong>Important:</strong> This app does not collect or transmit any personal information. 
-            All data is stored only on your device and is never sent to external servers.
+            <strong>Important:</strong> This app stores your golf records only on your device. 
+            However, we use Firebase Analytics to collect anonymized usage statistics for app improvement.
         </div>
         
         <h2>1. Information Collection and Use</h2>
         <p>Serious Golfer's Scorecard ("the App") handles information as follows:</p>
+        
+        <h3>1.1 Local Storage Data (Stored Only on Device)</h3>
         <ul>
-            <li><strong>Information Collected:</strong> None</li>
+            <li><strong>Information Collected:</strong> Golf round records, hole-by-hole details, app settings</li>
             <li><strong>External Transmission:</strong> None</li>
             <li><strong>Storage Location:</strong> Only on user's device internal storage</li>
         </ul>
+        
+        <h3>1.2 Usage Statistics via Firebase Analytics</h3>
+        <div class="analytics-info">
+            <p><strong>Collection Purpose:</strong> App improvement and user experience enhancement</p>
+            <p><strong>Information Collected:</strong></p>
+            <ul>
+                <li>App usage patterns (screen views, feature usage frequency)</li>
+                <li>Device information (OS version, device model, language settings)</li>
+                <li>App performance data (errors, app runtime)</li>
+                <li>Anonymized user ID (automatically generated by Firebase)</li>
+                <li>General golf statistics (round count, average scores, etc. - non-identifiable)</li>
+            </ul>
+            <p><strong>Information NOT Collected:</strong></p>
+            <ul>
+                <li>Personal identifiable information (name, email, phone number)</li>
+                <li>Precise location data</li>
+                <li>Specific golf course names or personal notes</li>
+            </ul>
+        </div>
         
         <h2>2. Data Generated by the App</h2>
         <p>The app stores the following user-entered information <strong>only on the user's device</strong>:</p>
@@ -162,55 +232,77 @@
             <li>Hole-by-hole details (Par, Score, Putt, Fairway, GIR, Hazard, Bunker, Penalty, Notes)</li>
             <li>App settings (language preferences, etc.)</li>
         </ul>
-        <p><strong>This data is never transmitted externally</strong> and is stored only on the user's device.</p>
+        <p><strong>This golf record data is never transmitted externally</strong> and is stored only on the user's device.</p>
         
         <h2>3. Third-Party Sharing</h2>
-        <p>The app does not share user information with any third parties.</p>
+        <p>The app does not share user information with third parties except:</p>
+        <ul>
+            <li><strong>Firebase Analytics (Google):</strong> For app usage statistics analysis
+                <ul>
+                    <li>Shared information: Anonymized usage patterns, device info, general statistics</li>
+                    <li>No personal identifiable information is shared</li>
+                    <li>Subject to Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                </ul>
+            </li>
+        </ul>
         
         <h2>4. Data Retention</h2>
         <ul>
-            <li>All data is retained on the device until the app is uninstalled.</li>
-            <li>Uninstalling the app will delete all data.</li>
-            <li>Users can delete individual records at any time within the app.</li>
+            <li><strong>Local Data:</strong> Retained on device until app is uninstalled</li>
+            <li><strong>Analytics Data:</strong> Automatically deleted after 14 months by Firebase</li>
+            <li>Uninstalling the app will delete all local data</li>
+            <li>Users can delete individual records at any time within the app</li>
         </ul>
         
         <h2>5. Data Deletion</h2>
         <ul>
-            <li>All data is automatically deleted when the app is uninstalled.</li>
-            <li>Individual records can be deleted directly within the app.</li>
+            <li>All local data is automatically deleted when the app is uninstalled</li>
+            <li>Individual records can be deleted directly within the app</li>
+            <li>Firebase Analytics data is automatically deleted after 14 months</li>
         </ul>
         
         <h2>6. User Rights</h2>
         <p>Users have the following rights:</p>
         <ul>
-            <li>View your data at any time within the app</li>
+            <li>View your golf records at any time within the app</li>
             <li>Modify or delete your data at any time within the app</li>
-            <li>Completely remove all data by uninstalling the app</li>
+            <li>Completely remove all local data by uninstalling the app</li>
+            <li>Disable Analytics tracking in device settings (reset advertising ID)</li>
         </ul>
         
         <h2>7. Security Measures</h2>
         <ul>
-            <li>All data is stored only in the device's internal storage</li>
-            <li>No data transmission over external networks</li>
+            <li>Golf record data is stored only in the device's internal storage</li>
+            <li>Firebase Analytics follows Google's security protocols</li>
+            <li>Transmitted Analytics data is encrypted</li>
+            <li>No personal identifiable information is collected</li>
             <li>Protected by device security settings (lock screen, etc.)</li>
         </ul>
         
         <h2>8. Internet Permission</h2>
-        <p>The app requests internet permission only for:</p>
+        <p>The app uses internet permission for:</p>
         <ul>
-            <li>Preparation for future updates (not currently used)</li>
+            <li><strong>Firebase Analytics:</strong> Transmitting anonymized usage statistics</li>
+            <li><strong>Future Features:</strong> Cloud backup, etc. (to be provided as optional features)</li>
         </ul>
-        <p><strong>The current version does not transmit any data over the internet.</strong></p>
+        <p><strong>Golf record data is not transmitted over the internet.</strong></p>
         
-        <h2>9. Changes to Privacy Policy</h2>
+        <h2>9. Opt-Out of Analytics Tracking</h2>
+        <p>Users can limit Analytics tracking through:</p>
         <ul>
-            <li>This privacy policy may be updated to reflect changes in laws or services.</li>
-            <li>Changes will be announced through app update notifications.</li>
-            <li>Significant changes will be announced at least 7 days in advance.</li>
+            <li><strong>Android:</strong> Settings > Google > Ads > Reset advertising ID</li>
+            <li><strong>iOS:</strong> Settings > Privacy > Tracking > Turn off "Allow Apps to Request to Track"</li>
+        </ul>
+        
+        <h2>10. Changes to Privacy Policy</h2>
+        <ul>
+            <li>This privacy policy may be updated to reflect changes in laws or services</li>
+            <li>Changes will be announced through app update notifications</li>
+            <li>Significant changes will be announced at least 7 days in advance</li>
         </ul>
         
         <div class="contact">
-            <h2>10. Contact Us</h2>
+            <h2>11. Contact Us</h2>
             <p>For privacy-related inquiries, please contact:</p>
             <ul>
                 <li><strong>Email:</strong> sorynury@gmail.com</li>
